@@ -1,9 +1,13 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+# db/seeds.rb
+Car.create!(
+  brand: "Toyota",
+  model: "Corolla",
+  year: 2020,
+  color: "Prata",
+  mileage: 32000,
+  price: 85000.0,
+  images: [
+    "https://omecanico.com.br/wp-content/uploads/2019/09/Toyota-Corolla-2020_1.jpg",
+    "https://quatrorodas.abril.com.br/wp-content/uploads/2019/03/painel-3-toyota-corolla.jpg?quality=70\\u0026strip=info\\u0026w=720\\u0026crop=1"
+  ].to_json
+)
