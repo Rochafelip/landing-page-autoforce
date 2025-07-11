@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header() {
   return (
-    <header className="z-3 bg-light border-bottom mb-4 position-fixed w-100 top-0">
+    <header className="z-3 bg-light border-bottom mb-4 ">
 
       <div className="container py-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
         <div className="d-flex align-items-center mb-2 mb-md-0">
@@ -11,7 +11,7 @@ function Header() {
             alt="Logo"
             className="me-2"
           />
-          <h1 className="h5 m-0">Rocha Seminovos</h1>
+          <h1 className="h4 m-0">Rocha Seminovos</h1>
         </div>
 
         <div className="text-center text-md-end">

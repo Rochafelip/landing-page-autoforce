@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white text-center text-md-start py-4 mt-5  position-fixed w-100 bottom-0">
+    <footer className="bg-dark text-white text-center text-md-start py-4 mt-5">
       <div className="container py-2">
         <div className="row justify-content-between align-items-start">
         {/* Informações da loja */}

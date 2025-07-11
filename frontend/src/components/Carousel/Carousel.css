@@ -2,7 +2,7 @@
  /* Pegar Imagem com 1500x700~900*/
   width: auto;
   height: auto;
-  object-fit: contain; /* Mantém a proporção da imagem */
+  object-fit: contain; 
 }
 
 .carousel-wrapper {
