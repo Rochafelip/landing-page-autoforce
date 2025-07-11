@@ -1,0 +1,13 @@
+.carousel-img {
+ /* Pegar Imagem com 1500x700~900*/
+  width: auto;
+  height: auto;
+  object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+.carousel-wrapper {
+  width: 1500px;       /* Largura fixa */
+  height: 600px;      /* Altura fixa */
+  overflow: hidden;   /* Esconde qualquer "excesso" da imagem */
+  margin: 0 auto;     /* Centraliza na página */
+}

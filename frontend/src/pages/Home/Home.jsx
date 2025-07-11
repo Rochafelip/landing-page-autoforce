@@ -1,17 +1,16 @@
-import Header from '../../components/Header.jsx';
-import Carousel from '../../components/Carousel.jsx';
+import Header from '../../components/Header/Header.jsx';
+import Carousel from '../../components/Carousel/Carousel.jsx';
 import '../../index.css';
+import Footer from '../../components/Footer/Footer.jsx';
 
 function Home() {
   return (
-    <>
-      <Header />
-      <Carousel />
-      <main className="container pt-5 mt-5">
-        <p>Landing page em construção...</p>
-      </main>
-    </>
-    
+    <div>
+      <Header className='container-xxl d-flex flex-column justify-content-center align-items-center'/>
+      <Carousel className='container-xxl d-flex flex-column justify-content-center align-items-center'/>
+      <Footer />
+
+    </div>    
   )
 }
 
