@@ -1,0 +1,25 @@
+.custom-carousel-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgb(95, 93, 93);
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+.carousel-control-prev.custom-carousel-btn {
+  left: -60px;
+}
+
+.carousel-control-next.custom-carousel-btn {
+  right: -60px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 2rem 2rem; /* aumenta o ícone */
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}

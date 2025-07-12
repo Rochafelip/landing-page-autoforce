@@ -1,5 +1,6 @@
 import React from 'react';
 import CardCarrosAtivo from '../CardCarrosAtivo/CardCarrosAtivo';
+import './FilteredCarCarousel.css';
 
 const FilteredCarCarousel = ({ cars }) => {
   if (!cars.length) return null;
@@ -12,7 +13,7 @@ const FilteredCarCarousel = ({ cars }) => {
     <section className="container my-5">
       <h2 className="mb-4">Resultado da Busca</h2>
 
-      <div id="carouselFiltered" className="carousel slide" data-bs-ride="carousel">
+      <div id="carouselFiltered" className="carousel slide">
         <div className="carousel-inner">
           {chunkedGroups.map((group, i) => (
             <div className={`carousel-item ${i === 0 ? 'active' : ''}`} key={i}>
@@ -30,25 +31,24 @@ const FilteredCarCarousel = ({ cars }) => {
             </div>
           ))}
         </div>
-
-        {/* Controles */}
         <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselFiltered"
-          data-bs-slide="prev"
+        className="carousel-control-prev custom-carousel-btn"
+        type="button"
+        data-bs-target="#carouselFiltered"
+        data-bs-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Anterior</span>
+        <i className="bi bi-arrow-left-circle-fill"></i>
+        <span className="visually-hidden">Anterior</span>
         </button>
+
         <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselFiltered"
-          data-bs-slide="next"
+        className="carousel-control-next custom-carousel-btn"
+        type="button"
+        data-bs-target="#carouselFiltered"
+        data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Próximo</span>
+        <i className="bi bi-arrow-right-circle-fill"></i>
+        <span className="visually-hidden">Próximo</span>
         </button>
       </div>
     </section>

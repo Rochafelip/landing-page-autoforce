@@ -41,41 +41,42 @@ const SearchBarMarcaModelo = ({ onFilter }) => {
     });
     onFilter(filtered);
   }, [selectedBrand, selectedModel, allCars]);
+    return (
+      <div className="container my-4">
+        <div className="d-flex justify-content-center">
+          <div className="row g-3 align-items-end w-100" style={{ maxWidth: '800px' }}>
+            <div className="col-md-6">
+              <label className="form-label">Marca</label>
+              <select
+                className="form-select"
+                value={selectedBrand}
+                onChange={e => setSelectedBrand(e.target.value)}
+              >
+                <option value="">Todas</option>
+                {brands.map((brand, idx) => (
+                  <option key={idx} value={brand}>{brand}</option>
+                ))}
+              </select>
+            </div>
 
-  return (
-    <div className="container my-4">
-      <div className="row g-3 align-items-end">
-        <div className="col-md-4">
-          <label className="form-label">Marca</label>
-          <select
-            className="form-select"
-            value={selectedBrand}
-            onChange={e => setSelectedBrand(e.target.value)}
-          >
-            <option value="">Todas</option>
-            {brands.map((brand, idx) => (
-              <option key={idx} value={brand}>{brand}</option>
-            ))}
-          </select>
-        </div>
-
-        <div className="col-md-4">
-          <label className="form-label">Modelo</label>
-          <select
-            className="form-select"
-            value={selectedModel}
-            onChange={e => setSelectedModel(e.target.value)}
-            disabled={!selectedBrand}
-          >
-            <option value="">Todos</option>
-            {models.map((model, idx) => (
-              <option key={idx} value={model}>{model}</option>
-            ))}
-          </select>
+            <div className="col-md-6">
+              <label className="form-label">Modelo</label>
+              <select
+                className="form-select"
+                value={selectedModel}
+                onChange={e => setSelectedModel(e.target.value)}
+                disabled={!selectedBrand}
+              >
+                <option value="">Todos</option>
+                {models.map((model, idx) => (
+                  <option key={idx} value={model}>{model}</option>
+                ))}
+              </select>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default SearchBarMarcaModelo;
