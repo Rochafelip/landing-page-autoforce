@@ -2,8 +2,8 @@
 import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const WhatsappButtonStatic = ({ phoneNumber, message, label = "Fale pelo WhatsApp" }) => {
-  const whatsappUrl = `https://wa.me/${8199724801}?text=${encodeURIComponent(message)}`;
+const WhatsappButtonStatic = ({ phoneNumber, message, label = "WhatsApp" }) => {
+  const whatsappUrl = `https://wa.me/${5581997524801}?text= Olá, gostaria de mais informações sobre as ofertas do mês.`;
 
   return (
     <a

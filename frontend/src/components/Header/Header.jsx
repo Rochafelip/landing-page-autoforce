@@ -1,4 +1,5 @@
 import React from 'react';
+import WhatsappButtonStatic from '../WhatsappButtonStatic/WhatsappButtonStatic.jsx';
 
 function Header() {
   return (
@@ -15,8 +16,7 @@ function Header() {
         </div>
 
         <div className="text-center text-md-end">
-          <p className="m-0 small">📞 (81) 99999-9999</p>
-          <p className="m-0 small">📱 WhatsApp: (81) 98888-8888</p>
+          <WhatsappButtonStatic />
         </div>
       </div>
 

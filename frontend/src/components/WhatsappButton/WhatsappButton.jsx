@@ -3,7 +3,7 @@ import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './WhatsappButton.css'; 
 const WhatsappButton = ({ phoneNumber, message }) => {
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const whatsappUrl = `https://wa.me/${5581997524801}?text= Olá, gostaria de mais informações sobre as ofertas do mês.`;
 
   return (
     <a
