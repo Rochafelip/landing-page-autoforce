@@ -34,7 +34,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/autoforcebr/" target="_blank" rel="noreferrer" className="text-white mx-2">
                 <i className="bi bi-instagram fs-4"></i>
             </a>
-            <a href="https://facebook.com/sualoja" target="_blank" rel="noreferrer" className="text-white mx-2">
+            <a href="https://web.facebook.com/AutoForcebr" target="_blank" rel="noreferrer" className="text-white mx-2">
                 <i className="bi bi-facebook fs-4"></i>
             </a>
             </div>
