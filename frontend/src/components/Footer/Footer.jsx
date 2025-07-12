@@ -31,7 +31,7 @@ const Footer = () => {
             <a href="https://wa.me/5581997524801" target="_blank" rel="noreferrer" className="text-white mx-2">
                 <i className="bi bi-whatsapp fs-4"></i>
             </a>
-            <a href="https://instagram.com/sualoja" target="_blank" rel="noreferrer" className="text-white mx-2">
+            <a href="https://www.instagram.com/autoforcebr/" target="_blank" rel="noreferrer" className="text-white mx-2">
                 <i className="bi bi-instagram fs-4"></i>
             </a>
             <a href="https://facebook.com/sualoja" target="_blank" rel="noreferrer" className="text-white mx-2">
