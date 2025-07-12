@@ -1,10 +1,7 @@
 import React from "react";
-import Corolla1 from '../../assets/Corolla/Corolla1.jpg';
-import Corolla2 from '../../assets/Corolla/Corolla2.jpg';
-import Corolla3 from '../../assets/Corolla/Corolla3.jpg';
-import Corolla4 from '../../assets/Corolla/Corolla4.jpg';
-import Placehold from '../../assets/Placehold/placehold.png'; // Placeholder image if needed
-import './Carousel.css'; // Assuming you have some styles for the carousel
+import Banner from '../../assets/Placehold/Banner.png';
+import Placehold from '../../assets/Placehold/placehold.png'; 
+import './Carousel.css'; 
 
 const Carousel = () => {
   return (
@@ -16,13 +13,13 @@ const Carousel = () => {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src={Corolla3} className="carousel-img" alt="..." />
+          <img src={Banner} className="carousel-img" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src={Corolla4} className="carousel-img" alt="..." />
+          <img src={Placehold} className="carousel-img" alt="..." />
         </div>
         <div className="carousel-item">
-          <img src={Corolla1} className="carousel-img" alt="..." />
+          <img src={Banner} className="carousel-img" alt="..." />
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
