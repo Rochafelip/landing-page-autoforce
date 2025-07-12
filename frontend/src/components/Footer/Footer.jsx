@@ -9,7 +9,9 @@ const Footer = () => {
         <div className="col-md-4 mb-3">
             <h3>Rocha Seminovos</h3>
             <p className="mb-1">Rua de Janeiro, 23 - Centro</p>
-            <p className="mb-0">Recife - PE | (85) 99999-9999</p>
+            <p className="mb-0">Recife - PE | (81) 99752-4801</p>
+            <p className="mb-0">CNPJ: 76.953.418/0001-85</p>
+            
         </div>
 
         {/* Horário de funcionamento */}
@@ -26,7 +28,7 @@ const Footer = () => {
         <div className="col-md-4 d-flex flex-column align-items-md-end align-items-center text-md-end text-center">
             <h3>Contatos</h3>
             <div>
-            <a href="https://wa.me/5585999999999" target="_blank" rel="noreferrer" className="text-white mx-2">
+            <a href="https://wa.me/5581997524801" target="_blank" rel="noreferrer" className="text-white mx-2">
                 <i className="bi bi-whatsapp fs-4"></i>
             </a>
             <a href="https://instagram.com/sualoja" target="_blank" rel="noreferrer" className="text-white mx-2">
