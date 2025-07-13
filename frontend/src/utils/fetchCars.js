@@ -10,7 +10,9 @@ export const fetchCars = async () => {
     return response.data.map(car => ({
       ...car,
       images: JSON.parse(car.images),
-      price: Number(car.price)
+      price: Number(car.price),
+      promo_price: Number(car.promo_price),
+      on_promo: Boolean(car.on_promo)
     }));
   } catch (error) {
     console.error('Erro ao buscar carros:', error);

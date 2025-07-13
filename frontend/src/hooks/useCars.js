@@ -1,6 +1,5 @@
-// useCars.js
 import { useState, useEffect } from 'react';
-import { fetchCars } from '../utils/fetchCars'; 
+import { fetchCars } from '../utils/fetchCars';
 
 const useCars = () => {
   const [cars, setCars] = useState([]);
