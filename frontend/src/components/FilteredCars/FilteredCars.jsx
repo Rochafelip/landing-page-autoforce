@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import CardDetailsCar from '../CardDetailCar/CardDetailCar';
 import './FilteredCars.css';
 
-const FilteredCars = ({ cars }) => {
+const FilteredCars = ({ cars, onCardClick }) => {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -31,7 +31,7 @@ const FilteredCars = ({ cars }) => {
         <div className="car-scroll-container" ref={scrollRef}>
           {cars.map((car) => (
             <div className="car-scroll-item" key={car.id}>
-              <CardDetailsCar car={car} />
+              <CardDetailsCar car={car} onClick={onCardClick} />
             </div>
           ))}
         </div>

@@ -5,17 +5,18 @@ import MainCarousel from '../../components/MainCarousel/MainCarousel.jsx';
 import SearchByMakeModel from '../../components/SearchByMakeModel/SearchByMakeModel.jsx';
 import FilteredCars from '../../components/FilteredCars/FilteredCars.jsx';
 import CarsOnSale from '../../components/CarsOnSale/CarsOnSale.jsx';
+import CarDetailModal from '../../components/CarDetailModal/CarDetailModal.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
-import ContactButton from '../../components/ContactButton/ContactButton.jsx';
+import ContactFooter from '../../components/ContactFooter/ContactFooter.jsx';
 import useCars from '../../hooks/useCars';
 
 import '../../index.css';
 
 function Home() {
-  const { cars: cars, loading } = useCars();
+  const { cars, loading } = useCars();
   const [filteredCars, setFilteredCars] = useState([]);
+  const [selectedCar, setSelectedCar] = useState(null); // ✅ Faltava isso
 
-  // Opcional: você pode mostrar um loading simples enquanto carrega os carros
   if (loading) {
     return <div>Carregando carros...</div>;
   }
@@ -26,9 +27,9 @@ function Home() {
       <main style={{ flex: '1 0 auto' }}>
         <MainCarousel />
         <SearchByMakeModel cars={cars} onFilter={setFilteredCars} />
-        <FilteredCars cars={filteredCars} />
-        <CarsOnSale cars={cars} />
-        <ContactButton />
+        <FilteredCars cars={filteredCars} onCardClick={setSelectedCar} />
+        <CarDetailModal show={!!selectedCar} car={selectedCar} onHide={() => setSelectedCar(null)} />
+        <CarsOnSale />
       </main>
       <Footer />
     </div>
