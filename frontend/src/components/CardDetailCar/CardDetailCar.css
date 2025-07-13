@@ -41,13 +41,12 @@
 }
 
 .price-highlight {
-  font-size: 1rem; /* diminui o tamanho da fonte (pode ajustar para o que quiser) */
+  font-size: 1rem; 
   padding: 0.25rem 0.5rem;
-  background-color: #0d3b66; /* seu azul escuro */
+  background-color: #0d3b66;
   border-radius: 6px;
 }
 
-/* Responsivo para mobile */
 @media (max-width: 576px) {
   .card-detail-car {
     max-width: 95%;

@@ -1,14 +1,13 @@
-.carousel-img {
+#mainCarousel .carousel-img {
   width: 100%;
-  height: auto; /* Deixe o navegador calcular a altura proporcional */
+  height: auto;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 25px;
   display: block;
-  max-height: 500px; /* limita em telas maiores */
+  max-height: 600px;
 }
 
-/* Wrapper centralizado e com responsividade */
-.carousel-wrapper {
+#mainCarousel.main-carousel-wrapper {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
@@ -16,37 +15,52 @@
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
-  background-color: rgb(211, 209, 209);
+  background-color: rgb(89, 88, 88);
   border-radius: 20px;
 }
 
+#mainCarousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc; 
+  margin: 0 5px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+#mainCarousel .carousel-indicators .active {
+  background-color: #000000; 
+  opacity: 0.9;
+  transform: scale(1.3);
+}
+
 @media (min-width: 1200px) {
-  .carousel-img {
+  #mainCarousel .carousel-img {
     max-height: 650px;
   }
 }
 
-/* Em tablets */
 @media (max-width: 991px) {
-  .carousel-img {
+  #mainCarousel .carousel-img {
     max-height: 400px;
   }
 }
 
-/* Em celulares */
 @media (max-width: 576px) {
-  .carousel-img {
+  #mainCarousel .carousel-img {
     max-height: 280px;
     border-radius: 10px;
   }
 
-  .carousel-wrapper {
+  #mainCarousel.main-carousel-wrapper {
     padding: 0 0.5rem;
     border-radius: 10px;
   }
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+  #mainCarousel .carousel-control-prev-icon,
+  #mainCarousel .carousel-control-next-icon {
     width: 1.5rem;
     height: 1.5rem;
   }

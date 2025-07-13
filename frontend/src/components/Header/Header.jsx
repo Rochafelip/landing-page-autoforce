@@ -7,7 +7,6 @@ function Header() {
   return (
     <header className="z-3 bg-light border-bottom mb-4">
       <div className="container py-2">
-        {/* Logo + Nome + Menu + WhatsApp */}
         <div className="d-flex justify-content-between align-items-center">
             <button
               className="btn btn-light d-md-none ms-2"
@@ -33,15 +32,14 @@ function Header() {
         </div>
       </div>
 
-      {/* Navegação */}
       <nav className="bg-primary">
         <div className="container">
           <div
             className={`${
               menuOpen ? 'd-block' : 'd-none'
-            } d-md-flex flex-column flex-md-row justify-content-center text-center`}
+            } d-md-flex flex-column flex-md-row justify-content-center text-center w-100`}
           >
-            <a href="#" className="nav-link text-white px-3 py-2">
+            <a href="#" onClick={() => setMenuOpen(false)} className="nav-link text-white px-3 py-2">
               Todos os Carros
             </a>
             <a href="#" className="nav-link text-white px-3 py-2">

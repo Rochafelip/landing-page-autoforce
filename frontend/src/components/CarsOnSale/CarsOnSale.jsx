@@ -26,7 +26,7 @@ const CarsOnSale = () => {
   }
 
   return (
-    <section className="container my-5">
+    <section id="ContainerOnSale" className="container my-5">
       <h2 className="mb-4 text-center">Veículos em Oferta</h2>
 
       <div id="carouselCards" className="carousel slide">
@@ -39,7 +39,7 @@ const CarsOnSale = () => {
               <div className="row justify-content-center">
                 {group.map(car => (
                   <div className="col-12 col-md-6 col-lg-3 mb-4" key={car.id}>
-                    <SaleCarCard car={car}/>
+                    <SaleCarCard car={car} />
                   </div>
                 ))}
               </div>
@@ -53,7 +53,7 @@ const CarsOnSale = () => {
           data-bs-target="#carouselCards"
           data-bs-slide="prev"
         >
-          <i className="bi bi-arrow-left-circle-fill"></i>
+          <i className="bi bi-arrow-left-circle text-white fs-3"></i>
           <span className="visually-hidden">Anterior</span>
         </button>
 
@@ -63,7 +63,7 @@ const CarsOnSale = () => {
           data-bs-target="#carouselCards"
           data-bs-slide="next"
         >
-          <i className="bi bi-arrow-right-circle-fill"></i>
+          <i className="bi bi-arrow-right-circle text-white fs-3"></i>
           <span className="visually-hidden">Próximo</span>
         </button>
       </div>

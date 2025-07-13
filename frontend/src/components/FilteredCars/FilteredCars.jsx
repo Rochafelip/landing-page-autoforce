@@ -25,7 +25,7 @@ const FilteredCars = ({ cars, onCardClick }) => {
           className="carousel-control-prev custom-carousel-btn"
           onClick={() => scroll('left')}
         >
-          <i className="bi bi-arrow-left-circle-fill text-white fs-3"></i>
+          <i className="bi bi-arrow-left-circle text-white fs-3"></i>
         </button>
 
         <div className="car-scroll-container" ref={scrollRef}>
@@ -37,10 +37,10 @@ const FilteredCars = ({ cars, onCardClick }) => {
         </div>
 
         <button
-          className="carousel-control-next custom-carousel-btn"
+          className="carousel-control-next custom-carousel-btn text-white fs-3"
           onClick={() => scroll('right')}
         >
-          <i className="bi bi-arrow-right-circle-fill text-white fs-3"></i>
+          <i className="bi bi-arrow-right-circle"></i>
         </button>
       </div>
     </section>

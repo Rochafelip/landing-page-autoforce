@@ -12,10 +12,9 @@
 
 .car-scroll-item {
   flex: 0 0 auto;
-  width: 280px; /* padrão desktop */
+  width: 280px; 
 }
 
-/* Posicionamento dos botões sobrepostos */
 .carousel-scroll-wrapper {
   position: relative;
 }
@@ -36,21 +35,26 @@
   right: -20px;
 }
 
-/* Ajustes para mobile */
 @media (max-width: 576px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
   .car-scroll-item {
-    width: 220px; /* menor largura para telas pequenas */
+    width: 220px;
   }
 
   .car-scroll-container {
     padding: 0.5rem 0;
     gap: 0.75rem;
+    -webkit-overflow-scrolling: touch;
   }
 
   .custom-carousel-btn {
     width: 40px;
     height: 40px;
-    min-width: 48px; /* garante hit area mínima */
+    min-width: 48px; 
     min-height: 48px;
   }
 

@@ -1,65 +1,76 @@
-.carousel-inner,
-.carousel-item {
-  overflow: visible !important;
+#ContainerOnSale {
+  background-color: rgb(236, 236, 236);
+  border-radius: 25px;
+  padding: 5px 0 0 0;
 }
 
-.custom-carousel-btn {
+#carouselCards .carousel-inner,
+#carouselCards .carousel-item {
+  overflow: visible !important;
+  background-color: rgb(149, 149, 149);
+  display: flex;
+  padding: 7px 7px 0px 7px;
+  align-items: flex-start;
+  border-radius: 20px;
+}
+
+#carouselCards .custom-carousel-btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: rgb(95, 93, 93);
   top: 50%;
+  position: absolute;
   transform: translateY(-50%);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  opacity: 1 !important;
-  z-index: 1050;
+  opacity: 1 !important;  
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   cursor: pointer;
+  z-index: 1050;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.custom-carousel-btn:hover,
-.custom-carousel-btn:focus {
+#carouselCards .custom-carousel-btn:hover,
+#carouselCards .custom-carousel-btn:focus {
   background-color: rgb(75, 73, 73);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   outline: none;
 }
 
-.carousel-control-prev.custom-carousel-btn {
+#carouselCards .carousel-control-prev.custom-carousel-btn {
   left: 10px;
 }
 
-.carousel-control-next.custom-carousel-btn {
+#carouselCards .carousel-control-next.custom-carousel-btn {
   right: 10px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
+#carouselCards .carousel-control-prev-icon,
+#carouselCards .carousel-control-next-icon {
   background-size: 1.5rem 1.5rem;
   filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
 }
 
 @media (max-width: 576px) {
-  .custom-carousel-btn {
+  #carouselCards .custom-carousel-btn {
     width: 40px;
     height: 40px;
     min-width: 48px;
     min-height: 48px;
   }
 
-  .carousel-control-prev.custom-carousel-btn {
+  #carouselCards .carousel-control-prev.custom-carousel-btn {
     left: 5px;
   }
 
-  .carousel-control-next.custom-carousel-btn {
+  #carouselCards .carousel-control-next.custom-carousel-btn {
     right: 5px;
   }
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
+  #carouselCards .carousel-control-prev-icon,
+  #carouselCards .carousel-control-next-icon {
     background-size: 1.2rem 1.2rem;
   }
 }

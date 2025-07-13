@@ -8,15 +8,13 @@ const SearchByMakeModel = ({ onFilter }) => {
   const [selectedModel, setSelectedModel] = useState('');
   const [models, setModels] = useState([]);
 
-  // Busca todos os carros na montagem do compon
   useEffect(() => {
     fetchCars().then((cars) => {
       setAllCars(cars);
-      onFilter(cars); // Exibe todos inicialmente
+      onFilter(cars);
     });
   }, []);
 
-  // Atualiza lista de modelos quando a marca muda
   useEffect(() => {
     if (selectedBrand) {
       const filteredModels = allCars
@@ -29,7 +27,6 @@ const SearchByMakeModel = ({ onFilter }) => {
     }
   }, [selectedBrand, allCars]);
 
-  // Aplica os filtros e envia para o pai
   useEffect(() => {
     const filtered = allCars.filter((car) => {
       return (
@@ -41,7 +38,6 @@ const SearchByMakeModel = ({ onFilter }) => {
     onFilter(filtered);
   }, [selectedBrand, selectedModel, allCars]);
 
-  // Marcas únicas
   const brands = [...new Set(allCars.map((car) => car.brand))];
 
   return (

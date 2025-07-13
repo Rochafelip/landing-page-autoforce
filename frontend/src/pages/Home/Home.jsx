@@ -7,7 +7,6 @@ import FilteredCars from '../../components/FilteredCars/FilteredCars.jsx';
 import CarsOnSale from '../../components/CarsOnSale/CarsOnSale.jsx';
 import CarDetailModal from '../../components/CarDetailModal/CarDetailModal.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
-import ContactFooter from '../../components/ContactFooter/ContactFooter.jsx';
 import useCars from '../../hooks/useCars';
 
 import '../../index.css';
@@ -29,9 +28,9 @@ function Home() {
         <SearchByMakeModel cars={cars} onFilter={setFilteredCars} />
         <FilteredCars cars={filteredCars} onCardClick={setSelectedCar} />
         <CarDetailModal show={!!selectedCar} car={selectedCar} onHide={() => setSelectedCar(null)} />
-        <CarsOnSale />
+        <CarsOnSale />        
       </main>
-      <Footer />
+      <Footer />      
     </div>
   );
 }

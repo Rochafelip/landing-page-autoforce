@@ -11,14 +11,13 @@ const ContactFooter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Monta a mensagem
     const mensagem = 
       `Olá, tudo bem?\n` +
       `Meu nome é ${form.nome}.\n` +
       `Estou entrando em contato pelo telefone ${form.telefone}.\n` +
       `Gostaria de falar sobre:\n${form.mensagem}\n\n` +
       `Aguardo seu retorno, obrigado!`;
-    const numeroWhatsapp = '5581997524801'; // seu número com DDD
+    const numeroWhatsapp = '5581997524801'; 
 
     const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
 
@@ -33,7 +32,7 @@ const ContactFooter = () => {
         <h4 className="mb-3">Entre em Contato</h4>
         <form onSubmit={handleSubmit}>
           <div className="row g-3">
-            <div className="col-12">
+            <div className="col-12 col-md-6">
               <label className="form-label">Nome</label>
               <input
                 type="text"
@@ -45,7 +44,7 @@ const ContactFooter = () => {
               />
             </div>
 
-            <div className="col-12">
+            <div className="col-12 col-md-6">
               <label className="form-label">Telefone</label>
               <input
                 type="tel"
