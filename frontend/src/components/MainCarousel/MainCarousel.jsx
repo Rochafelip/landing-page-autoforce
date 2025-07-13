@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from '../../assets/Placehold/Banner.png';
 import Placehold from '../../assets/Placehold/placehold.png'; 
-import './Carousel.css'; 
+import './MainCarousel.css'; 
 
 const Carousel = () => {
   return (
