@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './ContactModal.css';
+import './ContactFormModal.css';
 
-const ContactModal = ({ onClose }) => {
+const ContactFormModal = ({ onClose }) => {
   const [form, setForm] = useState({ nome: '', telefone: '', mensagem: '' });
 
   const handleChange = e => {
@@ -76,4 +76,4 @@ const ContactModal = ({ onClose }) => {
   );
 };
 
-export default ContactModal;
+export default ContactFormModal;

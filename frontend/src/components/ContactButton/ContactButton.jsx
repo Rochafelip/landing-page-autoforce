@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import ContactModal from '../../components/ContactModal/ContactModal.jsx';
-import './ContactUs.css';
+import ContactFormModal from '../ContactFormModal/ContactFormModal.jsx';
+import './ContactButton.css';
 
-const ContactUs = () => {
+const ContactButton = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -16,9 +16,9 @@ const ContactUs = () => {
         <i className="bi bi-envelope-fill fs-2"></i>
       </button>
 
-      {showModal && <ContactModal onClose={() => setShowModal(false)} />}
+      {showModal && <ContactFormModal onClose={() => setShowModal(false)} />}
     </>
   );
 };
 
-export default ContactUs;
+export default ContactButton;
