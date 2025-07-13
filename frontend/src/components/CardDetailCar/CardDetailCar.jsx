@@ -1,5 +1,7 @@
 import React from 'react';
+import CarDetailModal from '../CarDetailModal/CarDetailModal';
 import './CardDetailCar.css';
+
 import tags from '../../assets/icons/tags.svg';
 
 const colorMap = {
@@ -13,15 +15,16 @@ const colorMap = {
   'verde militar': '#4B5320',
 };
 
-const CardDetailCar = ({ car }) => {
-  console.log('CARRO RECEBIDO:', car);
+const CardDetailCar = ({ car, onClick  }) => {
   if (!car) return null;
 
   const imageUrl = car.images?.[0] || '';
   const corHex = colorMap[car.color?.toLowerCase()] || '#000';
 
   return (
-    <div className="card-detail-car card shadow-sm">
+    <div className="card-detail-car card shadow-sm cursor-pointer" 
+    onClick={() => onClick && onClick(car)} 
+    style={{ cursor: 'pointer' }}>
       {imageUrl && (
         <img
           src={imageUrl}
