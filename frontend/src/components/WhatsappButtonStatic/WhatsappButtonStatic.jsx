@@ -1,4 +1,3 @@
-// src/components/WhatsappButtonStatic.jsx
 import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -10,10 +9,11 @@ const WhatsappButtonStatic = ({ phoneNumber, message, label = "WhatsApp" }) => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="btn btn-success d-inline-flex align-items-center gap-2"
+      className="btn btn-success d-inline-flex align-items-center gap-2 btn-sm"
+      style={{ whiteSpace: 'nowrap' }}
     >
-      <i className="bi bi-whatsapp fs-5"></i>
-      {label}
+      <i className="bi bi-whatsapp fs-5 fs-md-4"></i>
+      <span className="d-none d-md-inline">{label}</span>
     </a>
   );
 };

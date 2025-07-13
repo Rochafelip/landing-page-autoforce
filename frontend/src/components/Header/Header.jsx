@@ -1,29 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WhatsappButtonStatic from '../WhatsappButtonStatic/WhatsappButtonStatic.jsx';
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header className="z-3 bg-light border-bottom mb-4 ">
+    <header className="z-3 bg-light border-bottom mb-4">
+      <div className="container py-2">
+        {/* Logo + Nome + Menu + WhatsApp */}
+        <div className="d-flex justify-content-between align-items-center">
+            <button
+              className="btn btn-light d-md-none ms-2"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle navigation"
+            >
+              <i className="bi bi-list fs-4"></i>
+            </button>
+          <div className="d-flex align-items-center">
+            <img
+              src="https://production.autoforce.com/uploads/group/logo/1814/logo_webp_comprar-dealer-seminovos_0759c60cac.png.webp"
+              alt="Logo"
+              className="me-2"
+              style={{ maxHeight: '50px', width: 'auto', maxWidth: '120px' }}
+            />
+            <h1 className="h4 m-0 d-none d-md-block">Rocha Seminovos</h1>
 
-      <div className="container py-2 d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <div className="d-flex align-items-center mb-2 mb-md-0">
-          <img
-            src="https://production.autoforce.com/uploads/group/logo/1814/logo_webp_comprar-dealer-seminovos_0759c60cac.png.webp"
-            alt="Logo"
-            className="me-2"
-          />
-          <h1 className="h4 m-0">Rocha Seminovos</h1>
-        </div>
+          </div>
 
-        <div className="text-center text-md-end">
-          <WhatsappButtonStatic />
+          <div className="text-end">
+            <WhatsappButtonStatic />
+          </div>
         </div>
       </div>
 
+      {/* Navegação */}
       <nav className="bg-primary">
-        <div className="container d-flex justify-content-center">
-          <a href="#" className="nav-link text-white px-3">Todos os Carros</a>
-          <a href="#" className="nav-link text-white px-3">Seminovos</a>
+        <div className="container">
+          <div
+            className={`${
+              menuOpen ? 'd-block' : 'd-none'
+            } d-md-flex flex-column flex-md-row justify-content-center text-center`}
+          >
+            <a href="#" className="nav-link text-white px-3 py-2">
+              Todos os Carros
+            </a>
+            <a href="#" className="nav-link text-white px-3 py-2">
+              Seminovos
+            </a>
+          </div>
         </div>
       </nav>
     </header>

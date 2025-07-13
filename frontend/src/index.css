@@ -11,9 +11,11 @@ body {
   max-width: 1700px;
   margin: 0 auto;
   background-color: #ffffff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* sombra suave para destacar */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
 }
 
+/* Root flexbox */
 #root {
   display: flex;
   flex-direction: column;
@@ -22,11 +24,30 @@ body {
 
 main {
   flex: 1 0 auto;
+  padding: 1rem;
 }
 
+/* Footer */
 footer {
   background-color: #222;
   color: white;
-  padding: rem 0;
+  padding: 1rem 0;
   text-align: center;
+}
+
+/* Responsivo geral */
+@media (max-width: 768px) {
+  body {
+    margin: 0 0; /* remove centralização lateral no mobile */
+    box-shadow: none;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 0.8rem 0;
+  }
 }
