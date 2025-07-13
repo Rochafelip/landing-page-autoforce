@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import Header from '../../components/Header/Header.jsx';
-import WhatsappButton from '../../components/WhatsappButton/WhatsappButton.jsx';
+import ContactUs from '../../components/ConctactUs/ContactUs.jsx';
 import Carousel from '../../components/Carousel/Carousel.jsx';
-import CarList from '../../components/CarList/CarList.jsx';
+import CarOnPromo from '../../components/CarOnPromo/CarOnPromo.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import SearchBarMarcaModelo from '../../components/SearchBarMarcaModelo/SearchBarMarcaModelo.jsx';
 import FilteredCarCarousel from '../../components/FilteredCarCarousel/FilteredCarCarousel.jsx';
@@ -12,7 +12,7 @@ import useCars from '../../hooks/useCars';
 import '../../index.css';
 
 function Home() {
-  const { cars: allCars, loading } = useCars();  // Dados e loading do hook custom
+  const { cars: cars, loading } = useCars();  
   const [filteredCars, setFilteredCars] = useState([]);
 
   // Opcional: você pode mostrar um loading simples enquanto carrega os carros
@@ -25,11 +25,10 @@ function Home() {
       <Header />
       <main style={{ flex: '1 0 auto' }}>
         <Carousel />
-        <SearchBarMarcaModelo cars={allCars} onFilter={setFilteredCars} />
+        <SearchBarMarcaModelo cars={cars} onFilter={setFilteredCars} />
         <FilteredCarCarousel cars={filteredCars} />
-        <CarList cars={allCars} />
-
-        <WhatsappButton />
+        <CarOnPromo cars={cars} />
+        <ContactUs />
       </main>
       <Footer />
     </div>
