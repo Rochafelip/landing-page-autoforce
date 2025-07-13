@@ -3,7 +3,7 @@ import Banner from '../../assets/Placehold/Banner.png';
 import Placehold from '../../assets/Placehold/placehold.png'; 
 import './MainCarousel.css'; 
 
-const Carousel = () => {
+const MainCarousel = () => {
   return (
     <div id="carouselExampleIndicators" className="carousel slide carousel-wrapper" data-bs-ride="carousel">
       <div className="carousel-indicators">
@@ -34,4 +34,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default MainCarousel;

@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import CardDetailsCar from '../CardDetailCar/CardDetailCar';
-import './FilteredCarCarousel.css';
+import './FilteredCars.css';
 
-const FilteredCarCarousel = ({ cars }) => {
+const FilteredCars = ({ cars }) => {
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -47,4 +47,4 @@ const FilteredCarCarousel = ({ cars }) => {
   );
 };
 
-export default FilteredCarCarousel;
+export default FilteredCars;

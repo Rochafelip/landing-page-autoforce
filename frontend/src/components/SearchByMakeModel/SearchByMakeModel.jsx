@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { fetchCars } from '../../utils/fetchCars';
 import './SearchByMakeModel.css';
 
-const SearchBarMarcaModelo = ({ onFilter }) => {
+const SearchByMakeModel = ({ onFilter }) => {
   const [allCars, setAllCars] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState('');
   const [selectedModel, setSelectedModel] = useState('');
@@ -84,4 +84,4 @@ const SearchBarMarcaModelo = ({ onFilter }) => {
   );
 };
 
-export default SearchBarMarcaModelo;
+export default SearchByMakeModel;
