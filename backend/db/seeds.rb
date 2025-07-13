@@ -29,7 +29,7 @@ Car.create!([
     cambio: "Manual",
     combustivel: "Flex",
     images: [
-      "https://www.webmotors.com.br/imagens/prod/346781/HONDA_CIVIC_2.0_16V_FLEXONE_SPORT_4P_CVT_34678116212998096.jpg",
+      "https://img.olx.com.br/images/16/165563650305705.webp",
       "https://www.webmotors.com.br/imagens/prod/346781/HONDA_CIVIC_2.0_16V_FLEXONE_SPORT_4P_CVT_34678116213041327.jpg?s=fill&w=440&h=330&q=80&t=true"
     ].to_json
   },
@@ -46,7 +46,7 @@ Car.create!([
     cambio: "Automático",
     combustivel: "Flex",
     images: [
-      "https://s3.ecompletocarros.dev/images/lojas/232/veiculos/176074/veiculoInfoVeiculoImagesMobile/vehicle_image_1705668368_03586d39fb5459f08f3eea27e394e0e5.jpeg",
+      "https://grupogerents.com.br/uploads/fotos_veiculos/20210827_onkah46h.jpg",
       "https://image1.mobiauto.com.br/images/api/images/v1.0/41864704/transform/fl_progressive,f_webp,q_85,w_959"
     ].to_json
   },
