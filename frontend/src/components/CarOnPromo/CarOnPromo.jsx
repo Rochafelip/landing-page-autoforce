@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { fetchCars } from '../../utils/fetchCars';
-import CardCarrosAtivo from '../CardDetailCar/CardDetailCar.jsx';
+import CardPromoDetailCar from '../CardPromoDetailCar/CardPromoDetailCar';
 import useResponsiveGroupSize from '../../hooks/useResponsiveGroupSize';
 import './CarOnPromo.css';
 
@@ -38,11 +38,8 @@ const CarOnPromo = () => {
             >
               <div className="row justify-content-center">
                 {group.map(car => (
-                  <div
-                    className="col-12 col-md-6 col-lg-3 mb-4"
-                    key={car.id}
-                  >
-                    {/* <CardCarrosAtivo car={car} /> */}
+                  <div className="col-12 col-md-6 col-lg-3 mb-4" key={car.id}>
+                    <CardPromoDetailCar car={car}/>
                   </div>
                 ))}
               </div>
