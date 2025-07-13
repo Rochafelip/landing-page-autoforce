@@ -1,0 +1,11 @@
+/* src/components/SearchBarMarcaModelo.css */
+@media (max-width: 576px) {
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .form-select {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+}

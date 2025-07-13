@@ -1,25 +1,69 @@
-.custom-carousel-btn {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: rgb(95, 93, 93);
+.car-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.car-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.car-scroll-item {
+  flex: 0 0 auto;
+  width: 280px; /* padrão desktop */
+}
+
+/* Posicionamento dos botões sobrepostos */
+.carousel-scroll-wrapper {
+  position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  opacity: 1 !important;
-  z-index: 10;
+  z-index: 1050;
 }
 
-.carousel-control-prev.custom-carousel-btn {
-  left: -60px;
+.carousel-control-prev {
+  left: -20px;
 }
 
-.carousel-control-next.custom-carousel-btn {
-  right: -60px;
+.carousel-control-next {
+  right: -20px;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 2rem 2rem; /* aumenta o ícone */
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+/* Ajustes para mobile */
+@media (max-width: 576px) {
+  .car-scroll-item {
+    width: 220px; /* menor largura para telas pequenas */
+  }
+
+  .car-scroll-container {
+    padding: 0.5rem 0;
+    gap: 0.75rem;
+  }
+
+  .custom-carousel-btn {
+    width: 40px;
+    height: 40px;
+    min-width: 48px; /* garante hit area mínima */
+    min-height: 48px;
+  }
+
+  .carousel-control-prev.custom-carousel-btn {
+    left: 5px;
+  }
+
+  .carousel-control-next.custom-carousel-btn {
+    right: 5px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-size: 1.2rem 1.2rem;
+  }
 }

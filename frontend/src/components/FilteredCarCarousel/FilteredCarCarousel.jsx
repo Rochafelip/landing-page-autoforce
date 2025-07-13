@@ -1,54 +1,46 @@
-import React from 'react';
-import CardCarrosAtivo from '../CardCarrosAtivo/CardCarrosAtivo';
+import React, { useRef } from 'react';
+import CardDetailsCar from '../CardDetailCar/CardDetailCar';
 import './FilteredCarCarousel.css';
 
 const FilteredCarCarousel = ({ cars }) => {
-  if (!cars.length) return null;
+  const scrollRef = useRef(null);
 
-  const chunkedGroups = Array.from({ length: Math.ceil(cars.length / 6) }).map((_, i) =>
-    cars.slice(i * 6, i * 6 + 6)
-  );
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (!current) return;
+
+    const scrollAmount = 300;
+    current.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <section className="container my-5">
-      <h2 className="mb-4">Resultado da Busca</h2>
+    <section className="container my-5 position-relative">
+      <h2 className="mb-4 text-center">Resultado da Busca</h2>
 
-      <div id="carouselFiltered" className="carousel slide">
-        <div className="carousel-inner">
-          {chunkedGroups.map((group, i) => (
-            <div className={`carousel-item ${i === 0 ? 'active' : ''}`} key={i}>
-              <div className="container">
-                {[0, 1].map(row => (
-                  <div className="row justify-content-center" key={row}>
-                    {group.slice(row * 3, row * 3 + 3).map(car => (
-                      <div className="col-12 col-sm-6 col-md-4 mb-4" key={car.id}>
-                        <CardCarrosAtivo car={car} />
-                      </div>
-                    ))}
-                  </div>
-                ))}
-              </div>
+      <div className="carousel-scroll-wrapper position-relative">
+        <button
+          className="carousel-control-prev custom-carousel-btn"
+          onClick={() => scroll('left')}
+        >
+          <i className="bi bi-arrow-left-circle-fill text-white fs-3"></i>
+        </button>
+
+        <div className="car-scroll-container" ref={scrollRef}>
+          {cars.map((car) => (
+            <div className="car-scroll-item" key={car.id}>
+              <CardDetailsCar car={car} />
             </div>
           ))}
         </div>
-        <button
-        className="carousel-control-prev custom-carousel-btn"
-        type="button"
-        data-bs-target="#carouselFiltered"
-        data-bs-slide="prev"
-        >
-        <i className="bi bi-arrow-left-circle-fill"></i>
-        <span className="visually-hidden">Anterior</span>
-        </button>
 
         <button
-        className="carousel-control-next custom-carousel-btn"
-        type="button"
-        data-bs-target="#carouselFiltered"
-        data-bs-slide="next"
+          className="carousel-control-next custom-carousel-btn"
+          onClick={() => scroll('right')}
         >
-        <i className="bi bi-arrow-right-circle-fill"></i>
-        <span className="visually-hidden">Próximo</span>
+          <i className="bi bi-arrow-right-circle-fill text-white fs-3"></i>
         </button>
       </div>
     </section>
