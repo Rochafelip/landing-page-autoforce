@@ -1,7 +1,6 @@
-// src/components/SearchBarMarcaModelo.jsx
 import React, { useState, useEffect } from 'react';
 import { fetchCars } from '../../utils/fetchCars';
-import './SearchBarMarcaModelo.css';
+import './SearchByMakeModel.css';
 
 const SearchBarMarcaModelo = ({ onFilter }) => {
   const [allCars, setAllCars] = useState([]);
@@ -9,7 +8,7 @@ const SearchBarMarcaModelo = ({ onFilter }) => {
   const [selectedModel, setSelectedModel] = useState('');
   const [models, setModels] = useState([]);
 
-  // Busca todos os carros na montagem do componente
+  // Busca todos os carros na montagem do compon
   useEffect(() => {
     fetchCars().then((cars) => {
       setAllCars(cars);
