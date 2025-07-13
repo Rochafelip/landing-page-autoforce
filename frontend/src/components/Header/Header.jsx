@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import WhatsappButtonStatic from '../WhatsappButtonStatic/WhatsappButtonStatic.jsx';
+import WhatsappButton from '../WhatsappButton/WhatsappButton.jsx';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,7 +28,7 @@ function Header() {
           </div>
 
           <div className="text-end">
-            <WhatsappButtonStatic />
+            <WhatsappButton />
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-const WhatsappButtonStatic = ({ phoneNumber, message, label = "WhatsApp" }) => {
+const WhatsappButton = ({ phoneNumber, message, label = "WhatsApp" }) => {
   const whatsappUrl = `https://wa.me/${5581997524801}?text= Olá, gostaria de mais informações sobre as ofertas do mês.`;
 
   return (
@@ -18,4 +18,4 @@ const WhatsappButtonStatic = ({ phoneNumber, message, label = "WhatsApp" }) => {
   );
 };
 
-export default WhatsappButtonStatic;
+export default WhatsappButton;
