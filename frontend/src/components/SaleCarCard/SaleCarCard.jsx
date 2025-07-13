@@ -1,5 +1,5 @@
 import React from 'react';
-import './CardPromoDetailCar.css';
+import './SaleCarCard.css';
 
 const colorMap = {
   prata: '#C0C0C0',
@@ -12,7 +12,7 @@ const colorMap = {
   'verde militar': '#4B5320',
 };
 
-const CardPromoDetailCar = ({ car }) => {
+const SaleCarCard = ({ car }) => {
   if (!car) return null;
 
   const imageUrl = car.images?.[0] || '';
@@ -78,4 +78,4 @@ const CardPromoDetailCar = ({ car }) => {
   );
 };
 
-export default CardPromoDetailCar;
+export default SaleCarCard;

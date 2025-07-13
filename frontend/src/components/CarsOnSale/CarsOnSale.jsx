@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { fetchCars } from '../../utils/fetchCars';
-import CardPromoDetailCar from '../CardPromoDetailCar/CardPromoDetailCar';
+import SaleCarCard from '../SaleCarCard/SaleCarCard';
 import useResponsiveGroupSize from '../../hooks/useResponsiveGroupSize';
-import './CarOnPromo.css';
+import './CarsOnSale.css';
 
-const CarOnPromo = () => {
+const CarsOnSale = () => {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
   const groupSize = useResponsiveGroupSize();
@@ -39,7 +39,7 @@ const CarOnPromo = () => {
               <div className="row justify-content-center">
                 {group.map(car => (
                   <div className="col-12 col-md-6 col-lg-3 mb-4" key={car.id}>
-                    <CardPromoDetailCar car={car}/>
+                    <SaleCarCard car={car}/>
                   </div>
                 ))}
               </div>
@@ -71,4 +71,4 @@ const CarOnPromo = () => {
   );
 };
 
-export default CarOnPromo;
+export default CarsOnSale;
