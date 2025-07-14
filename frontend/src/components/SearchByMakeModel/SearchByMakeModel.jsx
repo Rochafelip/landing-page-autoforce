@@ -41,7 +41,7 @@ const SearchByMakeModel = ({ onFilter }) => {
   const brands = [...new Set(allCars.map((car) => car.brand))];
 
   return (
-    <div className="container my-4">
+    <div id="SearchByMakeModel" className="container my-4">
       <div className="row justify-content-center">
         <div className="col-12 col-sm-6 col-md-4 mb-3">
           <label className="form-label">Marca</label>

@@ -1,7 +1,5 @@
 import React from 'react';
-import CarDetailModal from '../CarDetailModal/CarDetailModal';
 import './CardDetailCar.css';
-
 import tags from '../../assets/icons/tags.svg';
 
 const colorMap = {
@@ -15,16 +13,19 @@ const colorMap = {
   'verde militar': '#4B5320',
 };
 
-const CardDetailCar = ({ car, onClick  }) => {
+const CardDetailCar = ({ car, onClick }) => {
   if (!car) return null;
 
   const imageUrl = car.images?.[0] || '';
   const corHex = colorMap[car.color?.toLowerCase()] || '#000';
 
   return (
-    <div className="card-detail-car card shadow-sm cursor-pointer" 
-    onClick={() => onClick && onClick(car)} 
-    style={{ cursor: 'pointer' }}>
+    <div
+      id="CardDetailCar"
+      className="card shadow-sm cursor-pointer"
+      onClick={() => onClick && onClick(car)}
+      style={{ cursor: 'pointer' }}
+    >
       {imageUrl && (
         <img
           src={imageUrl}
@@ -34,8 +35,11 @@ const CardDetailCar = ({ car, onClick  }) => {
       )}
 
       <div className="card-body">
-        <h5 className="card-title text-center mb-3">
-          {car.brand} {car.model} {car.on_promo ? <img src={tags}  /> : ''}          
+        <h5 className="card-title text-center mb-3 d-flex justify-content-center align-items-center gap-2">
+          {car.brand} {car.model}
+          {car.on_promo && (
+            <img src={tags} alt="Promoção" className="promo-icon" />
+          )}
         </h5>
 
         <div className="row text-muted fs-6">
@@ -70,7 +74,9 @@ const CardDetailCar = ({ car, onClick  }) => {
           </div>
 
           <div className="col-6 mb-2 text-center fw-bold text-white fs-5 price-highlight">
-            R$ {car.on_promo ? car.promo_price.toLocaleString('pt-BR') : car.price.toLocaleString('pt-BR')}
+            R$ {car.on_promo
+              ? parseFloat(car.promo_price).toLocaleString('pt-BR')
+              : parseFloat(car.price).toLocaleString('pt-BR')}
           </div>
         </div>
       </div>

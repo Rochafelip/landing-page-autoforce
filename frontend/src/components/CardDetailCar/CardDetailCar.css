@@ -1,68 +1,64 @@
-.card-detail-car {
-  max-width: 360px;             /* Tamanho mais compacto */
-  width: 100%;
-  margin: 1.5rem auto;          /* Menor espaçamento vertical */
-  padding: 0.75rem;             /* Reduzido */
-  border-radius: 10px;
+#CardDetailCar {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #0082E6  ;
 }
 
-.car-image {
-  width: 100%;           /* Largura total do card */
-  height: 200px;         /* Altura fixa para uniformizar */
-  object-fit: cover;     /* Corta a imagem para preencher sem distorcer */
-  border-radius: 6px;
+#CardDetailCar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#CardDetailCar .car-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
   border-bottom: 1px solid #ddd;
-  display: block; 
+  border-radius: 6px 6px 0 0;
 }
 
-.card-title {
-  font-weight: bold;
-  color: #333;
-  font-size: 1.1rem;            /* Levemente reduzido */
+#CardDetailCar .promo-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 
-.card-body {
-  padding: 0.75rem 0.5rem;
-}
-
-.card-body p {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 0.4rem;
-}
-
-.list-group-item {
-  font-size: 0.95rem;
-  border: none;
-  padding: 0.4rem 0.65rem;
-}
-
-.price-highlight {
-  font-size: 1rem; 
+#CardDetailCar .price-highlight {
+  background-color: #af0000;
   padding: 0.25rem 0.5rem;
-  background-color: #0d3b66;
   border-radius: 6px;
 }
 
+/* Responsividade */
 @media (max-width: 576px) {
-  .card-detail-car {
+  #CardDetailCar {
+    margin: 0 auto;
     max-width: 95%;
-    padding: 0.75rem;
   }
 
-  .car-image {
-    height: 160px;
+  #CardDetailCar .car-image {
+    height: 150px;
   }
 
-  .card-body p,
-  .list-group-item {
-    font-size: 0.9rem;
+  #CardDetailCar .promo-icon {
+    width: 16px;
+    height: 16px;
   }
 
-  .price-highlight {
-    font-size: 0.95rem;
+  #CardDetailCar .price-highlight {
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  #CardDetailCar .card-body .row {
+    font-size: 0.85rem;
+  }
+}
+
+@media (hover: none) {
+  #CardDetailCar:hover {
+    transform: none;
+    box-shadow: none;
   }
 }

@@ -30,16 +30,16 @@ const SaleCarCard = ({ car }) => {
         />
       )}
 
-      <div className="card-body d-flex flex-column justify-content-center align-items-center text-center">
-        <h5 className="card-title text-center mb-3">{car.brand} {car.model}</h5>
+      <div className="card-body text-center">
+        <h5 className="card-title mb-3">{car.brand} {car.model}</h5>
 
-        <div className="row text-muted fs-6">
-          <div className="col-6 mb-2">
-            <i className="bi bi-calendar me-1"></i>
+        <div className="row text-muted fs-6 gx-2 gy-2">
+          <div className="col-6 d-flex align-items-center justify-content-start">
+            <i className="bi bi-calendar me-2"></i>
             <small><strong>Ano:</strong> {car.year}</small>
           </div>
 
-          <div className="col-6 mb-2 d-flex align-items-center">
+          <div className="col-6 d-flex align-items-center justify-content-start">
             <i className="bi bi-palette me-2"></i>
             <small>
               <strong>Cor:</strong>
@@ -51,7 +51,6 @@ const SaleCarCard = ({ car }) => {
                   backgroundColor: corHex,
                   borderRadius: '50%',
                   marginLeft: '8px',
-                  verticalAlign: 'middle',
                   border: '1px solid #ccc',
                 }}
                 title={car.color}
@@ -59,13 +58,13 @@ const SaleCarCard = ({ car }) => {
             </small>
           </div>
 
-          <div className="col-6 mb-2">
-            <i className="bi bi-speedometer2 me-1"></i>
+          <div className="col-6 d-flex align-items-center justify-content-start">
+            <i className="bi bi-speedometer2 me-2"></i>
             <small><strong>KM:</strong> {car.mileage.toLocaleString('pt-BR')} km</small>
           </div>
 
-          <div className="col-6 mb-2 text-center">
-            <small className="text-muted text-decoration-line-through d-block">
+          <div className="col-6 d-flex flex-column align-items-center text-center">
+            <small className="text-muted text-decoration-line-through">
               R$ {car.price.toLocaleString('pt-BR')}
             </small>
             <span className="fw-bold text-danger fs-5">

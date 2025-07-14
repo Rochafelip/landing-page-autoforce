@@ -1,18 +1,72 @@
-.contact-footer {
-  background-color: #494949;
+#ContactFooter {
+  background-color: #f8f9fa; /* Cor clara para o footer */
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
 }
 
-.contact-footer h4 {
-  font-weight: bold;
+#ContactFooter h4 {
+  color: #333;
+  font-weight: 600;
+  text-align: center;
 }
 
-.contact-footer .form-control:focus {
+#ContactFooter form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#ContactFooter label {
+  font-weight: 500;
+  color: #555;
+}
+
+#ContactFooter input.form-control,
+#ContactFooter textarea.form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+#ContactFooter input.form-control:focus,
+#ContactFooter textarea.form-control:focus {
+  border-color: #0d6efd; /* Bootstrap primary blue */
+  box-shadow: 0 0 8px rgba(13,110,253,0.3);
+  outline: none;
+}
+
+#ContactFooter button.btn-primary {
+  background-color: #0d6efd;
   border-color: #0d6efd;
-  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#ContactFooter button.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0b5ed7;
 }
 
 @media (max-width: 576px) {
-  .contact-footer .row > .col-md-6 {
+  #ContactFooter {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  #ContactFooter form {
+    padding: 0 1rem;
+  }
+
+  #ContactFooter h4 {
+    font-size: 1.25rem;
+  }
+
+  #ContactFooter button.btn-primary {
     width: 100%;
   }
 }

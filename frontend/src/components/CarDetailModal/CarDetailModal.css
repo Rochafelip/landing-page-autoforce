@@ -18,7 +18,7 @@
 }
 
 .modal-body {
-    background-color: #8a8c8c;
+    background-color: #276799;
 }
 
 .modal-content {
@@ -34,18 +34,19 @@
   height: 400px;
   object-fit: cover;
   object-position: center;
-  border-radius: 12px;
+  border-radius: 18px;
 }
 
 
 .car-details-grid {
   display: grid;
-  border-radius: 12px;
+  border-radius: 18px;
   grid-template-columns: repeat(4, 1fr); 
   gap: 1.1rem 1.2rem;
   padding: 1rem;
   font-size: 1.0rem;
-  background-color: #d8dada;
+  background-color: #f2f0f0;
+  
 }
 
 .car-modal-overlay {

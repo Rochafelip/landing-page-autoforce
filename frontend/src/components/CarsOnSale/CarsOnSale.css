@@ -1,76 +1,68 @@
-#ContainerOnSale {
-  background-color: rgb(236, 236, 236);
-  border-radius: 25px;
-  padding: 5px 0 0 0;
-}
-
-#carouselCards .carousel-inner,
-#carouselCards .carousel-item {
-  overflow: visible !important;
-  background-color: rgb(149, 149, 149);
-  display: flex;
-  padding: 7px 7px 0px 7px;
-  align-items: flex-start;
+#CarsOnSaleSection {
+  background-color: #f5f5f5;
   border-radius: 20px;
+  padding: 1rem;
 }
 
-#carouselCards .custom-carousel-btn {
+#CarsOnSaleSection .car-scroll-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+#CarsOnSaleSection .car-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+#CarsOnSaleSection .car-scroll-item {
+  flex: 0 0 auto;
+  width: 280px;
+}
+
+#CarsOnSaleSection .custom-carousel-btn {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: rgb(95, 93, 93);
-  top: 50%;
   position: absolute;
+  top: 50%;
   transform: translateY(-50%);
-  opacity: 1 !important;  
+  z-index: 1050;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   cursor: pointer;
-  z-index: 1050;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#carouselCards .custom-carousel-btn:hover,
-#carouselCards .custom-carousel-btn:focus {
+#CarsOnSaleSection .custom-carousel-btn:hover,
+#CarsOnSaleSection .custom-carousel-btn:focus {
   background-color: rgb(75, 73, 73);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  outline: none;
 }
 
-#carouselCards .carousel-control-prev.custom-carousel-btn {
-  left: 10px;
+#CarsOnSaleSection .custom-carousel-btn.left {
+  left: -20px;
 }
 
-#carouselCards .carousel-control-next.custom-carousel-btn {
-  right: 10px;
-}
-
-#carouselCards .carousel-control-prev-icon,
-#carouselCards .carousel-control-next-icon {
-  background-size: 1.5rem 1.5rem;
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+#CarsOnSaleSection .custom-carousel-btn.right {
+  right: -20px;
 }
 
 @media (max-width: 576px) {
-  #carouselCards .custom-carousel-btn {
-    width: 40px;
-    height: 40px;
-    min-width: 48px;
-    min-height: 48px;
+  #CarsOnSaleSection .car-scroll-container {
+    padding: 0.5rem 0;
+    gap: 0.75rem;
   }
 
-  #carouselCards .carousel-control-prev.custom-carousel-btn {
-    left: 5px;
+  #CarsOnSaleSection .car-scroll-item {
+    width: 220px;
   }
 
-  #carouselCards .carousel-control-next.custom-carousel-btn {
-    right: 5px;
-  }
-
-  #carouselCards .carousel-control-prev-icon,
-  #carouselCards .carousel-control-next-icon {
-    background-size: 1.2rem 1.2rem;
+  #CarsOnSaleSection .custom-carousel-btn {
+    display: none;
   }
 }

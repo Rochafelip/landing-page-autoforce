@@ -17,7 +17,7 @@ const FilteredCars = ({ cars, onCardClick }) => {
   };
 
   return (
-    <section className="container my-5 position-relative">
+    <section id="FilteredCars" className="container my-5 position-relative">
       <h2 className="mb-4 text-center">Resultado da Busca</h2>
 
       <div className="carousel-scroll-wrapper position-relative">

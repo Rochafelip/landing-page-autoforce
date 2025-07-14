@@ -59,18 +59,48 @@ const CarDetailModal = ({ show, onHide, car }) => {
                 </>
               )}
             </div>
-            <div className="car-details-grid">
-              <div className="item item-1"><strong>Ano:</strong> {car.year}</div>
-              <div className="item item-2"><strong>Cor:</strong> {car.color}</div>
-              <div className="item item-3"><strong>KM:</strong> {car.mileage.toLocaleString('pt-BR')} km</div>
-              <div className="item item-4"><strong>Preço:</strong> R$ {car.on_promo ? car.promo_price.toLocaleString('pt-BR') : car.price.toLocaleString('pt-BR')}</div>
-              <div className="item item-5"><strong>Câmbio:</strong> {car.cambio}</div>
-              <div className="item item-6"><strong>Combustível:</strong> {car.combustivel}</div>
-              <div className="item item-7"><strong>Carroceria:</strong> {car.carroceria}</div>
-              <div className="item item-8"><strong>Portas:</strong> {car.doors || 'N/A'}</div>
-              <div className="item item-9"><strong>Placa:</strong> {car.plate || 'N/A'}</div>
-              <div className="item item-10"><strong>Final Placa:</strong> {car.plate?.slice(-1) || 'N/A'}</div>
-            </div>
+              <div className="car-details-grid">
+                <div className="item item-1">
+                  <i className="bi bi-calendar-event me-2"></i>
+                  <strong>Ano:</strong> {car.year}
+                </div>
+                <div className="item item-2">
+                  <i className="bi bi-palette me-2"></i>
+                  <strong>Cor:</strong> {car.color}
+                </div>
+                <div className="item item-3">
+                  <i className="bi bi-speedometer2 me-2"></i>
+                  <strong>KM:</strong> {car.mileage.toLocaleString('pt-BR')} km
+                </div>
+                <div className="item item-4">
+                  <i className="bi bi-cash-coin me-2"></i>
+                  <strong>Preço:</strong> R$ {car.on_promo ? car.promo_price.toLocaleString('pt-BR') : car.price.toLocaleString('pt-BR')}
+                </div>
+                <div className="item item-5">
+                  <i className="bi bi-gear me-2"></i>
+                  <strong>Câmbio:</strong> {car.cambio}
+                </div>
+                <div className="item item-6">
+                  <i className="bi bi-fuel-pump me-2"></i>
+                  <strong>Combustível:</strong> {car.combustivel}
+                </div>
+                <div className="item item-7">
+                  <i className="bi bi-truck-front me-2"></i>
+                  <strong>Carroceria:</strong> {car.carroceria}
+                </div>
+                <div className="item item-8">
+                  <i className="bi bi-door-closed me-2"></i>
+                  <strong>Portas:</strong> {car.doors || 'N/A'}
+                </div>
+                <div className="item item-9">
+                  <i className="bi bi-card-text me-2"></i>
+                  <strong>Placa:</strong> {car.plate || 'N/A'}
+                </div>
+                <div className="item item-10">
+                  <i className="bi bi-123 me-2"></i>
+                  <strong>Final Placa:</strong> {car.plate?.slice(-1) || 'N/A'}
+                </div>
+              </div>
           </div>
         </div>
       </div>

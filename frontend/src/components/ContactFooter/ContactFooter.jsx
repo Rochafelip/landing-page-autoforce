@@ -27,7 +27,7 @@ const ContactFooter = () => {
   };
 
   return (
-    <div className="contact-footer py-4 px-3">
+    <div id="ContactFooter" className="contact-footer py-4 px-3">
       <div className="container">
         <h4 className="mb-3">Entre em Contato</h4>
         <form onSubmit={handleSubmit}>
