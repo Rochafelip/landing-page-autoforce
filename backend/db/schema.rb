@@ -26,5 +26,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_12_151804) do
     t.decimal "promo_price", precision: 10, scale: 2
     t.string "cambio"
     t.string "combustivel"
+    t.integer "doors"
+    t.string "plate"
+    t.string "plate_end"
   end
 end
