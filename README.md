@@ -50,7 +50,8 @@ gem 'puma', '~> 6.0'
 gem 'rack-cors', '~> 2.0'
 ```
 ### 🔧 Frontend (React)
-Node.js (v18+)
+
+#### Node.js (v18+)
 ---
 
 ### Guia Rápido de Instalação 🚀
