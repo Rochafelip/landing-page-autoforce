@@ -1,9 +1,10 @@
-// src/utils/fetchCars.js
 import axios from 'axios';
+
+const API_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:3000';
 
 export const fetchCars = async () => {
   try {
-    const response = await axios.get('http://127.0.0.1:3000/cars', {
+    const response = await axios.get(`${API_URL}/cars`, {
       headers: { Accept: 'application/json' }
     });
 
