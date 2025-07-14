@@ -1,3 +1,7 @@
+#FilteredCars {
+  background-color: white;
+  border-radius: 18px;
+}
 #FilteredCars .car-scroll-container {
   display: flex;
   overflow-x: auto;
