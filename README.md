@@ -38,6 +38,7 @@ A aplicação é composta por:
 1. **Ruby 3.2+** e **Rails 7+**
 2. **Sqlite3** instalado
 3. Clonar o projeto e executar:
+  
 
 #### 🧰 Gems Utilizadas
 
@@ -48,21 +49,45 @@ gem 'sqlite3', '~> 1.6'
 gem 'puma', '~> 6.0'
 gem 'rack-cors', '~> 2.0'
 ```
-
-```bash
-bundle install
-rails db:create db:migrate db:seed
-rails server
-```
 ### 🔧 Frontend (React)
 Node.js (v18+)
+---
 
-Clonar o projeto e executar:
+### Guia Rápido de Instalação 🚀
+
+Após clonar o repositório:
+```bash
+git clone <URL-do-repo>
+cd <nome-do-repo>
+```
+---
+
+### Backend (Rails API)
 
 ```bash
-npm install
-npm run dev
+cd backend
+bundle install           # Instala as gems
+rails db:create          # Cria o banco de dados
+rails db:migrate         # Executa migrations
+rails db:seed            # Popula com dados iniciais (se houver)
+rails server             # Inicia o servidor na porta 3000
 ```
+
+A API estará rodando em:
+http://localhost:3000
+
+Frontend (React)
+Abra outro terminal:
+
+```bash
+cd frontend
+npm install              # Instala dependências do Node
+npm run dev              # Inicia o servidor frontend (Vite)
+```
+
+O frontend estará rodando em:
+http://localhost:5173 (ou outra porta que o Vite escolher)
+
 ---
 
 🧩 Estrutura da Página
