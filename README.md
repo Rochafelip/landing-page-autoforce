@@ -122,5 +122,12 @@ Redireciona para o WhatsApp com mensagem automática
 Contato direto e branding
 
 ---
+
+## 🌐 Links de Acesso
+
+- **API Backend:** [https://landing-page-autoforce-backend.onrender.com])  
+- **Frontend:** [[https://rochafelip.github.io/landing-page-autoforce/])  
+
+---
 📦 Considerações Finais
 Este projeto foi pensado para ser rápido, responsivo e fácil de usar tanto em desktop quanto em dispositivos móveis, com foco em vendas online de veículos. O objetivo é aproximar o comprador de uma decisão com clareza de informações e um ponto de contato direto.
