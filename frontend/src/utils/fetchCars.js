@@ -4,9 +4,7 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:3000';
 
 export const fetchCars = async () => {
   try {
-    const response = await axios.get(`${API_URL}/cars`, {
-      headers: { Accept: 'application/json' },
-    });
+  const response = await axios.get(`${API_URL}/cars`)
 
     return response.data.map(car => ({
       ...car,
