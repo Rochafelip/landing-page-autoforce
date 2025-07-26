@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import LoadingScreen from '../../components/LoadingScreen/LoadingScreen';
 
 import Header from '../../components/Header/Header.jsx';
 import MainCarousel from '../../components/MainCarousel/MainCarousel.jsx';
@@ -17,7 +18,7 @@ function Home() {
   const [selectedCar, setSelectedCar] = useState(null); // ✅ Faltava isso
 
   if (loading) {
-    return <div>Carregando carros...</div>;
+    return <LoadingScreen />;
   }
 
   return (
