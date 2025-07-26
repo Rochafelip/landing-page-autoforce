@@ -10,9 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "homepage": "https://Rochafelip.github.io/landing-page-autoforce"
-
-    
+    "homepage": "https://Rochafelip.github.io/landing-page-autoforce"    
   },
   "dependencies": {
     "axios": "^1.10.0",
